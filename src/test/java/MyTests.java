@@ -32,14 +32,15 @@ public class MyTests {
 
     @Test
     public void testAppleCounter() {
-        String[][] mat1 = {  {"apple", "banana", "fig"},
-                             {"kiwi", "pineapple", "applesauce"},
-                             {"crabapple", "lime", "pomelo"}
+        String[][] mat1 = {  {"apple", "banana", "fig", "jar"},
+                             {"kiwi", "pineapple", "applesauce", "jam"},
+                             {"crabapple", "lime", "pomelo", "jab"}
         };
 
         assertEquals(2, MyMain.appleCounter(mat1, 0),"The number of apple words in col 0 of \n" + Arrays.deepToString(mat1) + "\nshould be: " + 2);
         assertEquals(1, MyMain.appleCounter(mat1, 1),"The number of apple words in col 1 of \n" + Arrays.deepToString(mat1) + "\nshould be: " + 1);
         assertEquals(1, MyMain.appleCounter(mat1, 2),"The number of apple words in col 2 of \n" + Arrays.deepToString(mat1) + "\nshould be: " + 1);
+        assertEquals(0, MyMain.appleCounter(mat1, 3),"The number of apple words in col 3 of \n" + Arrays.deepToString(mat1) + "\nshould be: " + 0);
     }
 
     @Test
